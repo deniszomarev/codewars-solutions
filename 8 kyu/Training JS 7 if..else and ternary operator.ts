@@ -46,5 +46,14 @@ In the end, click "Submit" to submit your code and pass this kata.
 */
 
 export function saleHotdogs(n: number): number {
-  return n < 5 ? 100 * n : n >= 5 && n < 10 ? 95 * n : n >= 10 ? 90 * n : true;
+  if (n < 5) {
+    return 100 * n;
+  }
+  if (n >= 5 && n < 10) {
+    return 95 * n;
+  }
+  if (n >= 10) {
+    return 90 * n;
+  }
+  return n;
 }
